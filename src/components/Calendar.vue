@@ -1,15 +1,12 @@
 <template>
-  <div class="text-center section">
-    <h2 class="h2">Custom Calendars</h2>
-    <p class="text-lg font-medium text-gray-600 mb-6">
-      Roll your own calendars using scoped slots
-    </p>
+  <div>
     <v-calendar
       class="custom-calendar max-w-full"
       :masks="masks"
       :attributes="attributes"
       disable-page-swipe
       is-expanded
+      locale="ja"
     >
       <template v-slot:day-content="{ day, attributes }">
         <div class="flex flex-col h-full z-10 overflow-hidden">
@@ -125,7 +122,7 @@ export default {
 ::-webkit-scrollbar-track {
   display: none;
 }
-/deep/ .custom-calendar.vc-container {
+/deep/ .custom-calendar .vc-container {
   --day-border: 1px solid #b8c2cc;
   --day-border-highlight: 1px solid #b8c2cc;
   --day-width: 90px;
@@ -170,5 +167,16 @@ export default {
   & .vc-day-dots {
     margin-bottom: 5px;
   }
+}
+</style>
+
+<style scoped>
+.vc-container >>> .vc-day {
+  border: 1px solid #b8c2cc;
+  height: 150px;
+  width: 100%;
+}
+.custom-calendar {
+  width: 90%;
 }
 </style>

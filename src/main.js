@@ -5,7 +5,7 @@ import router from "./router";
 import store from "./store";
 
 import VCalendar from "v-calendar";
-import "v-calendar/lib/v-calendar.min.css";
+// import "v-calendar/lib/v-calendar.min.css";
 Vue.use(VCalendar);
 
 Vue.config.productionTip = false;
