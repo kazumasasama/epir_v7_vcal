@@ -1,27 +1,44 @@
 <template>
   <div>
-    <b-nav tabs>
-      <b-nav-item><router-link to="/">Home</router-link></b-nav-item> |
-      <b-nav-item><router-link to="/about">About</router-link></b-nav-item> |
-      <b-nav-item><router-link to="/appointments">Appointments</router-link></b-nav-item> |
-      <b-nav-item><router-link to="/customers">Customers</router-link></b-nav-item>
-    </b-nav>
+    <b-navbar type="light" variant="light">
+      <div class="logo">
+        <img alt="epiR logo" src="../assets/epiRLogo70x40.png" />
+      </div>
+      <b-navbar-nav class="nav">
+        <b-nav-item class="nav-item1"><router-link to="/">Home</router-link></b-nav-item>
+        <b-nav-item><router-link to="/about">About</router-link></b-nav-item>
+        <b-nav-item><router-link to="/appointments">Appointments</router-link></b-nav-item>
+        <b-nav-item><router-link to="/customers">Customers</router-link></b-nav-item>
+
+        <!-- Navbar dropdowns -->
+        <b-nav-item-dropdown text="Lang" right>
+          <b-dropdown-item href="#">EN</b-dropdown-item>
+          <b-dropdown-item href="#">ES</b-dropdown-item>
+          <b-dropdown-item href="#">RU</b-dropdown-item>
+          <b-dropdown-item href="#">FA</b-dropdown-item>
+        </b-nav-item-dropdown>
+
+        <b-nav-item-dropdown text="アカウント" right>
+          <b-dropdown-item href="#">Account</b-dropdown-item>
+          <b-dropdown-item href="#">Settings</b-dropdown-item>
+        </b-nav-item-dropdown>
+      </b-navbar-nav>
+    </b-navbar>
   </div>
 </template>
 
 <script></script>
 
 <style>
-#nav {
-  padding: 30px;
+.logo {
+  text-align: left;
+  padding: 15px;
 }
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
+.nav {
+  padding: 15px;
+  text-align: right;
 }
-
-#nav a.router-link-exact-active {
-  color: #42b983;
+.nav-item1 {
+  margin-left: 20px;
 }
 </style>
