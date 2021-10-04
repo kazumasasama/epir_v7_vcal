@@ -1,9 +1,11 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link> |
-    <router-link to="/appointments">Appointments</router-link> |
-    <router-link to="/customers">Customers</router-link>
+  <div>
+    <b-nav tabs>
+      <b-nav-item><router-link to="/">Home</router-link></b-nav-item> |
+      <b-nav-item><router-link to="/about">About</router-link></b-nav-item> |
+      <b-nav-item><router-link to="/appointments">Appointments</router-link></b-nav-item> |
+      <b-nav-item><router-link to="/customers">Customers</router-link></b-nav-item>
+    </b-nav>
   </div>
 </template>
 
