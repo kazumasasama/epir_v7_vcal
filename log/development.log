@@ -1,0 +1,365 @@
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateCustomers (20211004173749)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "customers" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar NOT NULL, "birthday" date, "gender" integer, "phone" varchar, "email" varchar, "password" varchar, "line_id" varchar, "appointment_id" integer, "memo" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20211004173749_create_customers.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20211004173749"]]
+  ↳ bin/rails:9
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-10-04 17:40:43.548812"], ["updated_at", "2021-10-04 17:40:43.548812"]]
+  ↳ bin/rails:9
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Ktie/.rbenv/versions/2.7.4/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[36mCustomer Create (2.1ms)[0m  [1m[32mINSERT INTO "customers" ("name", "gender", "phone", "email", "password", "line_id", "appointment_id", "memo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "にゃんこ1"], ["gender", 1], ["phone", "111-111-1111"], ["email", "test@example.com"], ["password", "password"], ["line_id", "line_id"], ["appointment_id", 1], ["memo", "111"], ["created_at", "2021-10-04 17:56:00.992973"], ["updated_at", "2021-10-04 17:56:00.992973"]]
+  ↳ db/seeds.rb:8
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[36mCustomer Create (0.3ms)[0m  [1m[32mINSERT INTO "customers" ("name", "gender", "phone", "email", "password", "line_id", "appointment_id", "memo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "にゃんこ2"], ["gender", 2], ["phone", "222-222-2222"], ["email", "test@example.com"], ["password", "password"], ["line_id", "line_id"], ["appointment_id", 2], ["memo", "222"], ["created_at", "2021-10-04 17:56:01.000142"], ["updated_at", "2021-10-04 17:56:01.000142"]]
+  ↳ db/seeds.rb:8
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[36mCustomer Create (0.3ms)[0m  [1m[32mINSERT INTO "customers" ("name", "gender", "phone", "email", "password", "line_id", "appointment_id", "memo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "にゃんこ3"], ["gender", 1], ["phone", "333-333-3333"], ["email", "test@example.com"], ["password", "password"], ["line_id", "line_id"], ["appointment_id", 3], ["memo", "333"], ["created_at", "2021-10-04 17:56:01.005411"], ["updated_at", "2021-10-04 17:56:01.005411"]]
+  ↳ db/seeds.rb:8
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[36mCustomer Create (0.2ms)[0m  [1m[32mINSERT INTO "customers" ("name", "gender", "phone", "email", "password", "line_id", "appointment_id", "memo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "にゃんこ4"], ["gender", 2], ["phone", "444-444-4444"], ["email", "test@example.com"], ["password", "password"], ["line_id", "line_id"], ["appointment_id", 4], ["memo", "444"], ["created_at", "2021-10-04 17:56:01.009859"], ["updated_at", "2021-10-04 17:56:01.009859"]]
+  ↳ db/seeds.rb:8
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.9ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[36mCustomer Create (0.2ms)[0m  [1m[32mINSERT INTO "customers" ("name", "gender", "phone", "email", "password", "line_id", "appointment_id", "memo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "にゃんこ5"], ["gender", 1], ["phone", "555-555-5555"], ["email", "test@example.com"], ["password", "password"], ["line_id", "line_id"], ["appointment_id", 5], ["memo", "555"], ["created_at", "2021-10-04 17:56:01.014215"], ["updated_at", "2021-10-04 17:56:01.014215"]]
+  ↳ db/seeds.rb:8
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[36mCustomer Create (0.5ms)[0m  [1m[32mINSERT INTO "customers" ("name", "gender", "phone", "email", "password", "line_id", "appointment_id", "memo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "にゃんこ6"], ["gender", 2], ["phone", "666-666-6666"], ["email", "test@example.com"], ["password", "password"], ["line_id", "line_id"], ["appointment_id", 6], ["memo", "666"], ["created_at", "2021-10-04 17:56:01.022284"], ["updated_at", "2021-10-04 17:56:01.022284"]]
+  ↳ db/seeds.rb:8
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[36mCustomer Create (1.6ms)[0m  [1m[32mINSERT INTO "customers" ("name", "gender", "phone", "email", "password", "line_id", "appointment_id", "memo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "にゃんこ7"], ["gender", 1], ["phone", "777-777-7777"], ["email", "test@example.com"], ["password", "password"], ["line_id", "line_id"], ["appointment_id", 7], ["memo", "777"], ["created_at", "2021-10-04 17:56:01.042067"], ["updated_at", "2021-10-04 17:56:01.042067"]]
+  ↳ db/seeds.rb:8
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[36mCustomer Create (0.2ms)[0m  [1m[32mINSERT INTO "customers" ("name", "gender", "phone", "email", "password", "line_id", "appointment_id", "memo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "にゃんこ8"], ["gender", 2], ["phone", "888-888-8888"], ["email", "test@example.com"], ["password", "password"], ["line_id", "line_id"], ["appointment_id", 8], ["memo", "888"], ["created_at", "2021-10-04 17:56:01.046830"], ["updated_at", "2021-10-04 17:56:01.046830"]]
+  ↳ db/seeds.rb:8
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[36mCustomer Create (0.2ms)[0m  [1m[32mINSERT INTO "customers" ("name", "gender", "phone", "email", "password", "line_id", "appointment_id", "memo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "にゃんこ9"], ["gender", 1], ["phone", "999-999-9999"], ["email", "test@example.com"], ["password", "password"], ["line_id", "line_id"], ["appointment_id", 9], ["memo", "999"], ["created_at", "2021-10-04 17:56:01.049772"], ["updated_at", "2021-10-04 17:56:01.049772"]]
+  ↳ db/seeds.rb:8
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[36mCustomer Create (0.3ms)[0m  [1m[32mINSERT INTO "customers" ("name", "gender", "phone", "email", "password", "line_id", "appointment_id", "memo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "にゃんこ10"], ["gender", 2], ["phone", "000-000-0000"], ["email", "test@example.com"], ["password", "password"], ["line_id", "line_id"], ["appointment_id", 0], ["memo", "000"], ["created_at", "2021-10-04 17:56:01.053584"], ["updated_at", "2021-10-04 17:56:01.053584"]]
+  ↳ db/seeds.rb:8
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Ktie/.rbenv/versions/2.7.4/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[36mCustomer Create (1.6ms)[0m  [1m[32mINSERT INTO "customers" ("name", "gender", "phone", "email", "password", "line_id", "appointment_id", "memo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "にゃんこ1"], ["gender", 1], ["phone", "111-111-1111"], ["email", "test@example.com"], ["password", "password"], ["line_id", "line_id"], ["appointment_id", 1], ["memo", "111"], ["created_at", "2021-10-04 19:58:24.889355"], ["updated_at", "2021-10-04 19:58:24.889355"]]
+  ↳ db/seeds.rb:8
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[36mCustomer Create (0.2ms)[0m  [1m[32mINSERT INTO "customers" ("name", "gender", "phone", "email", "password", "line_id", "appointment_id", "memo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "にゃんこ2"], ["gender", 2], ["phone", "222-222-2222"], ["email", "test@example.com"], ["password", "password"], ["line_id", "line_id"], ["appointment_id", 2], ["memo", "222"], ["created_at", "2021-10-04 19:58:24.893692"], ["updated_at", "2021-10-04 19:58:24.893692"]]
+  ↳ db/seeds.rb:8
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[36mCustomer Create (0.3ms)[0m  [1m[32mINSERT INTO "customers" ("name", "gender", "phone", "email", "password", "line_id", "appointment_id", "memo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "にゃんこ3"], ["gender", 1], ["phone", "333-333-3333"], ["email", "test@example.com"], ["password", "password"], ["line_id", "line_id"], ["appointment_id", 3], ["memo", "333"], ["created_at", "2021-10-04 19:58:24.896138"], ["updated_at", "2021-10-04 19:58:24.896138"]]
+  ↳ db/seeds.rb:8
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[36mCustomer Create (0.2ms)[0m  [1m[32mINSERT INTO "customers" ("name", "gender", "phone", "email", "password", "line_id", "appointment_id", "memo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "にゃんこ4"], ["gender", 2], ["phone", "444-444-4444"], ["email", "test@example.com"], ["password", "password"], ["line_id", "line_id"], ["appointment_id", 4], ["memo", "444"], ["created_at", "2021-10-04 19:58:24.898574"], ["updated_at", "2021-10-04 19:58:24.898574"]]
+  ↳ db/seeds.rb:8
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[36mCustomer Create (0.2ms)[0m  [1m[32mINSERT INTO "customers" ("name", "gender", "phone", "email", "password", "line_id", "appointment_id", "memo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "にゃんこ5"], ["gender", 1], ["phone", "555-555-5555"], ["email", "test@example.com"], ["password", "password"], ["line_id", "line_id"], ["appointment_id", 5], ["memo", "555"], ["created_at", "2021-10-04 19:58:24.901159"], ["updated_at", "2021-10-04 19:58:24.901159"]]
+  ↳ db/seeds.rb:8
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[36mCustomer Create (0.2ms)[0m  [1m[32mINSERT INTO "customers" ("name", "gender", "phone", "email", "password", "line_id", "appointment_id", "memo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "にゃんこ6"], ["gender", 2], ["phone", "666-666-6666"], ["email", "test@example.com"], ["password", "password"], ["line_id", "line_id"], ["appointment_id", 6], ["memo", "666"], ["created_at", "2021-10-04 19:58:24.903471"], ["updated_at", "2021-10-04 19:58:24.903471"]]
+  ↳ db/seeds.rb:8
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[36mCustomer Create (0.2ms)[0m  [1m[32mINSERT INTO "customers" ("name", "gender", "phone", "email", "password", "line_id", "appointment_id", "memo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "にゃんこ7"], ["gender", 1], ["phone", "777-777-7777"], ["email", "test@example.com"], ["password", "password"], ["line_id", "line_id"], ["appointment_id", 7], ["memo", "777"], ["created_at", "2021-10-04 19:58:24.905720"], ["updated_at", "2021-10-04 19:58:24.905720"]]
+  ↳ db/seeds.rb:8
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[36mCustomer Create (0.4ms)[0m  [1m[32mINSERT INTO "customers" ("name", "gender", "phone", "email", "password", "line_id", "appointment_id", "memo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "にゃんこ8"], ["gender", 2], ["phone", "888-888-8888"], ["email", "test@example.com"], ["password", "password"], ["line_id", "line_id"], ["appointment_id", 8], ["memo", "888"], ["created_at", "2021-10-04 19:58:24.925051"], ["updated_at", "2021-10-04 19:58:24.925051"]]
+  ↳ db/seeds.rb:8
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[36mCustomer Create (0.3ms)[0m  [1m[32mINSERT INTO "customers" ("name", "gender", "phone", "email", "password", "line_id", "appointment_id", "memo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "にゃんこ9"], ["gender", 1], ["phone", "999-999-9999"], ["email", "test@example.com"], ["password", "password"], ["line_id", "line_id"], ["appointment_id", 9], ["memo", "999"], ["created_at", "2021-10-04 19:58:24.930627"], ["updated_at", "2021-10-04 19:58:24.930627"]]
+  ↳ db/seeds.rb:8
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[36mCustomer Create (0.2ms)[0m  [1m[32mINSERT INTO "customers" ("name", "gender", "phone", "email", "password", "line_id", "appointment_id", "memo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "にゃんこ10"], ["gender", 2], ["phone", "000-000-0000"], ["email", "test@example.com"], ["password", "password"], ["line_id", "line_id"], ["appointment_id", 0], ["memo", "000"], ["created_at", "2021-10-04 19:58:24.934374"], ["updated_at", "2021-10-04 19:58:24.934374"]]
+  ↳ db/seeds.rb:8
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "customers"[0m
+  ↳ db/schema.rb:15
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/schema.rb:15
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "customers" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar NOT NULL, "birthday" date, "gender" integer, "phone" varchar, "email" varchar, "password" varchar, "line_id" varchar, "appointment_id" integer, "memo" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:15
+  [1m[35m (5.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20211004173749)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-10-04 20:00:09.126980"], ["updated_at", "2021-10-04 20:00:09.126980"]]
+  ↳ db/schema.rb:13
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "customers"[0m
+  ↳ db/schema.rb:15
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/schema.rb:15
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "customers" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar NOT NULL, "birthday" date, "gender" integer, "phone" varchar, "email" varchar, "password" varchar, "line_id" varchar, "appointment_id" integer, "memo" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:15
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20211004173749)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-10-04 20:00:09.141022"], ["updated_at", "2021-10-04 20:00:09.141022"]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Update (0.2ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = ?, "updated_at" = ? WHERE "ar_internal_metadata"."key" = ?[0m  [["value", "test"], ["updated_at", "2021-10-04 20:00:09.143260"], ["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[36mCustomer Create (0.3ms)[0m  [1m[32mINSERT INTO "customers" ("name", "gender", "phone", "email", "password", "line_id", "appointment_id", "memo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "にゃんこ1"], ["gender", 1], ["phone", "111-111-1111"], ["email", "test@example.com"], ["password", "password"], ["line_id", "line_id"], ["appointment_id", 1], ["memo", "111"], ["created_at", "2021-10-04 20:00:09.161951"], ["updated_at", "2021-10-04 20:00:09.161951"]]
+  ↳ db/seeds.rb:8
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[36mCustomer Create (0.3ms)[0m  [1m[32mINSERT INTO "customers" ("name", "gender", "phone", "email", "password", "line_id", "appointment_id", "memo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "にゃんこ2"], ["gender", 2], ["phone", "222-222-2222"], ["email", "test@example.com"], ["password", "password"], ["line_id", "line_id"], ["appointment_id", 2], ["memo", "222"], ["created_at", "2021-10-04 20:00:09.164713"], ["updated_at", "2021-10-04 20:00:09.164713"]]
+  ↳ db/seeds.rb:8
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[36mCustomer Create (0.2ms)[0m  [1m[32mINSERT INTO "customers" ("name", "gender", "phone", "email", "password", "line_id", "appointment_id", "memo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "にゃんこ3"], ["gender", 1], ["phone", "333-333-3333"], ["email", "test@example.com"], ["password", "password"], ["line_id", "line_id"], ["appointment_id", 3], ["memo", "333"], ["created_at", "2021-10-04 20:00:09.167363"], ["updated_at", "2021-10-04 20:00:09.167363"]]
+  ↳ db/seeds.rb:8
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[36mCustomer Create (0.2ms)[0m  [1m[32mINSERT INTO "customers" ("name", "gender", "phone", "email", "password", "line_id", "appointment_id", "memo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "にゃんこ4"], ["gender", 2], ["phone", "444-444-4444"], ["email", "test@example.com"], ["password", "password"], ["line_id", "line_id"], ["appointment_id", 4], ["memo", "444"], ["created_at", "2021-10-04 20:00:09.169293"], ["updated_at", "2021-10-04 20:00:09.169293"]]
+  ↳ db/seeds.rb:8
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[36mCustomer Create (0.4ms)[0m  [1m[32mINSERT INTO "customers" ("name", "gender", "phone", "email", "password", "line_id", "appointment_id", "memo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "にゃんこ5"], ["gender", 1], ["phone", "555-555-5555"], ["email", "test@example.com"], ["password", "password"], ["line_id", "line_id"], ["appointment_id", 5], ["memo", "555"], ["created_at", "2021-10-04 20:00:09.171748"], ["updated_at", "2021-10-04 20:00:09.171748"]]
+  ↳ db/seeds.rb:8
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[36mCustomer Create (0.2ms)[0m  [1m[32mINSERT INTO "customers" ("name", "gender", "phone", "email", "password", "line_id", "appointment_id", "memo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "にゃんこ6"], ["gender", 2], ["phone", "666-666-6666"], ["email", "test@example.com"], ["password", "password"], ["line_id", "line_id"], ["appointment_id", 6], ["memo", "666"], ["created_at", "2021-10-04 20:00:09.174026"], ["updated_at", "2021-10-04 20:00:09.174026"]]
+  ↳ db/seeds.rb:8
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[36mCustomer Create (0.2ms)[0m  [1m[32mINSERT INTO "customers" ("name", "gender", "phone", "email", "password", "line_id", "appointment_id", "memo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "にゃんこ7"], ["gender", 1], ["phone", "777-777-7777"], ["email", "test@example.com"], ["password", "password"], ["line_id", "line_id"], ["appointment_id", 7], ["memo", "777"], ["created_at", "2021-10-04 20:00:09.175991"], ["updated_at", "2021-10-04 20:00:09.175991"]]
+  ↳ db/seeds.rb:8
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[36mCustomer Create (0.3ms)[0m  [1m[32mINSERT INTO "customers" ("name", "gender", "phone", "email", "password", "line_id", "appointment_id", "memo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "にゃんこ8"], ["gender", 2], ["phone", "888-888-8888"], ["email", "test@example.com"], ["password", "password"], ["line_id", "line_id"], ["appointment_id", 8], ["memo", "888"], ["created_at", "2021-10-04 20:00:09.178039"], ["updated_at", "2021-10-04 20:00:09.178039"]]
+  ↳ db/seeds.rb:8
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[36mCustomer Create (1.6ms)[0m  [1m[32mINSERT INTO "customers" ("name", "gender", "phone", "email", "password", "line_id", "appointment_id", "memo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "にゃんこ9"], ["gender", 1], ["phone", "999-999-9999"], ["email", "test@example.com"], ["password", "password"], ["line_id", "line_id"], ["appointment_id", 9], ["memo", "999"], ["created_at", "2021-10-04 20:00:09.180162"], ["updated_at", "2021-10-04 20:00:09.180162"]]
+  ↳ db/seeds.rb:8
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[36mCustomer Create (0.3ms)[0m  [1m[32mINSERT INTO "customers" ("name", "gender", "phone", "email", "password", "line_id", "appointment_id", "memo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "にゃんこ10"], ["gender", 2], ["phone", "000-000-0000"], ["email", "test@example.com"], ["password", "password"], ["line_id", "line_id"], ["appointment_id", 0], ["memo", "000"], ["created_at", "2021-10-04 20:00:09.184520"], ["updated_at", "2021-10-04 20:00:09.184520"]]
+  ↳ db/seeds.rb:8
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Ktie/.rbenv/versions/2.7.4/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[36mCustomer Create (0.4ms)[0m  [1m[32mINSERT INTO "customers" ("name", "gender", "phone", "email", "password", "line_id", "appointment_id", "memo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "にゃんこ1"], ["gender", 1], ["phone", "111-111-1111"], ["email", "test@example.com"], ["password", "password"], ["line_id", "line_id"], ["appointment_id", 1], ["memo", "111"], ["created_at", "2021-10-04 20:00:18.067310"], ["updated_at", "2021-10-04 20:00:18.067310"]]
+  ↳ db/seeds.rb:8
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[36mCustomer Create (0.2ms)[0m  [1m[32mINSERT INTO "customers" ("name", "gender", "phone", "email", "password", "line_id", "appointment_id", "memo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "にゃんこ2"], ["gender", 2], ["phone", "222-222-2222"], ["email", "test@example.com"], ["password", "password"], ["line_id", "line_id"], ["appointment_id", 2], ["memo", "222"], ["created_at", "2021-10-04 20:00:18.071445"], ["updated_at", "2021-10-04 20:00:18.071445"]]
+  ↳ db/seeds.rb:8
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[36mCustomer Create (0.2ms)[0m  [1m[32mINSERT INTO "customers" ("name", "gender", "phone", "email", "password", "line_id", "appointment_id", "memo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "にゃんこ3"], ["gender", 1], ["phone", "333-333-3333"], ["email", "test@example.com"], ["password", "password"], ["line_id", "line_id"], ["appointment_id", 3], ["memo", "333"], ["created_at", "2021-10-04 20:00:18.073841"], ["updated_at", "2021-10-04 20:00:18.073841"]]
+  ↳ db/seeds.rb:8
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[36mCustomer Create (0.2ms)[0m  [1m[32mINSERT INTO "customers" ("name", "gender", "phone", "email", "password", "line_id", "appointment_id", "memo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "にゃんこ4"], ["gender", 2], ["phone", "444-444-4444"], ["email", "test@example.com"], ["password", "password"], ["line_id", "line_id"], ["appointment_id", 4], ["memo", "444"], ["created_at", "2021-10-04 20:00:18.076438"], ["updated_at", "2021-10-04 20:00:18.076438"]]
+  ↳ db/seeds.rb:8
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[36mCustomer Create (0.4ms)[0m  [1m[32mINSERT INTO "customers" ("name", "gender", "phone", "email", "password", "line_id", "appointment_id", "memo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "にゃんこ5"], ["gender", 1], ["phone", "555-555-5555"], ["email", "test@example.com"], ["password", "password"], ["line_id", "line_id"], ["appointment_id", 5], ["memo", "555"], ["created_at", "2021-10-04 20:00:18.079042"], ["updated_at", "2021-10-04 20:00:18.079042"]]
+  ↳ db/seeds.rb:8
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[36mCustomer Create (0.2ms)[0m  [1m[32mINSERT INTO "customers" ("name", "gender", "phone", "email", "password", "line_id", "appointment_id", "memo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "にゃんこ6"], ["gender", 2], ["phone", "666-666-6666"], ["email", "test@example.com"], ["password", "password"], ["line_id", "line_id"], ["appointment_id", 6], ["memo", "666"], ["created_at", "2021-10-04 20:00:18.082290"], ["updated_at", "2021-10-04 20:00:18.082290"]]
+  ↳ db/seeds.rb:8
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[36mCustomer Create (0.2ms)[0m  [1m[32mINSERT INTO "customers" ("name", "gender", "phone", "email", "password", "line_id", "appointment_id", "memo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "にゃんこ7"], ["gender", 1], ["phone", "777-777-7777"], ["email", "test@example.com"], ["password", "password"], ["line_id", "line_id"], ["appointment_id", 7], ["memo", "777"], ["created_at", "2021-10-04 20:00:18.084864"], ["updated_at", "2021-10-04 20:00:18.084864"]]
+  ↳ db/seeds.rb:8
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[36mCustomer Create (0.2ms)[0m  [1m[32mINSERT INTO "customers" ("name", "gender", "phone", "email", "password", "line_id", "appointment_id", "memo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "にゃんこ8"], ["gender", 2], ["phone", "888-888-8888"], ["email", "test@example.com"], ["password", "password"], ["line_id", "line_id"], ["appointment_id", 8], ["memo", "888"], ["created_at", "2021-10-04 20:00:18.087609"], ["updated_at", "2021-10-04 20:00:18.087609"]]
+  ↳ db/seeds.rb:8
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[36mCustomer Create (0.3ms)[0m  [1m[32mINSERT INTO "customers" ("name", "gender", "phone", "email", "password", "line_id", "appointment_id", "memo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "にゃんこ9"], ["gender", 1], ["phone", "999-999-9999"], ["email", "test@example.com"], ["password", "password"], ["line_id", "line_id"], ["appointment_id", 9], ["memo", "999"], ["created_at", "2021-10-04 20:00:18.094172"], ["updated_at", "2021-10-04 20:00:18.094172"]]
+  ↳ db/seeds.rb:8
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[36mCustomer Create (1.4ms)[0m  [1m[32mINSERT INTO "customers" ("name", "gender", "phone", "email", "password", "line_id", "appointment_id", "memo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "にゃんこ10"], ["gender", 2], ["phone", "000-000-0000"], ["email", "test@example.com"], ["password", "password"], ["line_id", "line_id"], ["appointment_id", 0], ["memo", "000"], ["created_at", "2021-10-04 20:00:18.113479"], ["updated_at", "2021-10-04 20:00:18.113479"]]
+  ↳ db/seeds.rb:8
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9

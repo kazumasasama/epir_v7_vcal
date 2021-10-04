@@ -29,6 +29,7 @@
 
 <script>
 export default {
+  name: "Calendar",
   data() {
     const month = new Date().getMonth();
     const year = new Date().getFullYear();
