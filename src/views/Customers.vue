@@ -1,18 +1,23 @@
 <template>
-  <CustomersTable
+  <div class="container">
+    <CustomersTable
     :key="key"
     :customers="customers"
     @showDetail="doShow"
   />
+  <CustomerDetail />
+  </div>
 </template>
 
 <script>
 import CustomersTable from "../components/CustomersTable";
+import CustomerDetail from "../components/CustomerDetail";
+
 import axios from "axios";
 
 export default {
   name: "Customers",
-  components: { CustomersTable },
+  components: { CustomersTable, CustomerDetail },
   data() {
     return {
       form: {},
@@ -22,18 +27,21 @@ export default {
       customerInfoBool: false,
     };
   },
-  mounted: function() {
+  mounted: function () {
     this.fetchCustomers();
   },
   methods: {
     fetchCustomers() {
-      axios.get("api/customers").then((res) => {
-        for(var i = 0; i < res.data.customers.length; i++) {
-          this.customers.push(res.data.customers[i]);
-        }
-      }, (error) => {
+      axios.get("api/customers").then(
+        (res) => {
+          for (var i = 0; i < res.data.customers.length; i++) {
+            this.customers.push(res.data.customers[i]);
+          }
+        },
+        (error) => {
           console.log(error);
-      });
+        }
+      );
     },
     setCustomerInfo(id){
       axios.get(`api/customers/${id}.json`).then((res) => {

@@ -1,6 +1,8 @@
 <template>
   <div>
-    <b-button @click="customerInfoBool = !customerInfoBool">Open Modal</b-button>
+    <b-button @click="customerInfoBool = !customerInfoBool">
+      Open Modal
+    </b-button>
 
     <b-modal v-model="customerInfoBool">Hello From Modal!</b-modal>
   </div>
@@ -9,18 +11,22 @@
 <script>
 export default {
   props: {
-    customerInfo: {},
+    customerInfo: {
+      type: Object,
+      default() {
+        return {
+          id: "",
+          name: "",
+          birthday: "",
+          gender: "",
+          phone: "",
+          email: "",
+          line_id: "",
+          memo: "",
+        }
+      }
+    },
     customerInfoBool: false,
   },
 };
 </script>
-
-data() {
-    return {
-      form: {},
-      key: 0,
-      customers: [],
-      customerInfo: {},
-      customerInfoBool: false,
-    };
-  },
