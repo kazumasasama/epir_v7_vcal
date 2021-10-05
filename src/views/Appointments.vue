@@ -1,5 +1,6 @@
 <template>
-  <div class="appointments">
+  <div class="container">
+    <h1>予約カレンダー</h1>
     <Calendar />
   </div>
 </template>

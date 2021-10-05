@@ -1,9 +1,12 @@
 <template>
-  <CustomersTable
-    :key="key"
-    :customers="customers"
-    @showDetail="doShow"
-  />
+  <div>
+    <CustomersTable
+      :key="key"
+      :customers="customers"
+      @showDetail="setCustomerInfo"
+    />
+    <CustomerDetail />
+  </div>
 </template>
 
 <script>
@@ -15,14 +18,12 @@ export default {
   components: { CustomersTable },
   data() {
     return {
-      form: {},
       key: 0,
-      customers: [],
       customerInfo: {},
       customerInfoBool: false,
     };
   },
-  mounted: function() {
+  mounted: function () {
     this.fetchCustomers();
   },
   methods: {

@@ -24,7 +24,7 @@ export default {
   },
   methods: {
     showDetail(index, row) {
-      this.$emit("showDetail", index, row)
+      this.$emit("showDetail", index, row);
     },
   },
 };
