@@ -2,6 +2,7 @@
   <CustomersTable
     :key="key"
     :customers="customers"
+    @showDetail="doShow"
   />
 </template>
 
@@ -26,20 +27,27 @@ export default {
   },
   methods: {
     fetchCustomers() {
-      axios.get('api/customers').then((res) => {
+      axios.get("api/customers").then((res) => {
         for(var i = 0; i < res.data.customers.length; i++) {
-        this.customers.push(res.data.customers[i]);
+          this.customers.push(res.data.customers[i]);
         }
       }, (error) => {
-        console.log(error);
+          console.log(error);
       });
     },
     setCustomerInfo(id){
-        axios.get(`api/customers/${id}.json`).then(res => {
-          this.customerInfo = res.data;
-          this.customerInfoBool = true;
-        });
-      }
-  }
+      axios.get(`api/customers/${id}.json`).then((res) => {
+        this.customerInfo = res.data;
+        this.customerInfoBool = true;
+      });
+    },
+    doShow(index, row) {
+      this.form = row;
+      this.customerInfoBool = true;
+    },
+    doClose() {
+      this.customerInfoBool = true;
+    },
+  },
 };
 </script>
