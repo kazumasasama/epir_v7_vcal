@@ -1,13 +1,39 @@
 <template>
   <div class="container">
-    <p class="resize">
-      <img alt="Home cover photo" src="../assets/top.png" width="100%" />
-    </p>
+    <h1>予約カレンダー</h1>
+    <button @click="toggleWeekends">toggle weekends</button>
+    <FullCalendar :options="calendarOptions" />
   </div>
 </template>
 
 <script>
+import "@fullcalendar/core/vdom"; // solves problem with Vite
+import FullCalendar from "@fullcalendar/vue";
+import dayGridPlugin from "@fullcalendar/daygrid";
+import timeGridPlugin from '@fullcalendar/timegrid';
+import interactionPlugin from "@fullcalendar/interaction";
+
 export default {
-  name: "Home",
+  components: {
+    FullCalendar, // make the <FullCalendar> tag available
+  },
+  data() {
+    return {
+      calendarOptions: {
+        plugins: [timeGridPlugin, dayGridPlugin, interactionPlugin],
+        initialView: "timeGridWeek",
+        dateClick: this.handleDateClick,
+        weekends: false, // initial value
+      },
+    };
+  },
+  methods: {
+    toggleWeekends: function () {
+      this.calendarOptions.weekends = !this.calendarOptions.weekends; // toggle the boolean!
+    },
+    handleDateClick: function (arg) {
+      alert("date click! " + arg.dateStr);
+    },
+  },
 };
 </script>

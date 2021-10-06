@@ -903,6 +903,55 @@
     "@babel/helper-validator-identifier" "^7.14.9"
     to-fast-properties "^2.0.0"
 
+"@fullcalendar/common@~5.9.0":
+  version "5.9.0"
+  resolved "https://registry.npmjs.org/@fullcalendar/common/-/common-5.9.0.tgz"
+  integrity sha512-wfUDRg53gzUU7Ng1wqjvvM2ncFx+5PiyCq5k2KjEbMourv7m4Zw6B3xlhpQbfUv3WOnbJgwLLNLFEMcsEJpXBQ==
+  dependencies:
+    tslib "^2.1.0"
+
+"@fullcalendar/core@^5.9.0", "@fullcalendar/core@~5.9.0":
+  version "5.9.0"
+  resolved "https://registry.npmjs.org/@fullcalendar/core/-/core-5.9.0.tgz"
+  integrity sha512-3+zSm8ykXqM2vEGYp4P/BEoR2TB0W9mN6zBGZ6SY9y0nC+Fc0+ZXJmFlYmrEYSdO4kmREnlxntkp1+o9mu8PIQ==
+  dependencies:
+    "@fullcalendar/common" "~5.9.0"
+    preact "^10.0.5"
+    tslib "^2.1.0"
+
+"@fullcalendar/daygrid@^5.9.0", "@fullcalendar/daygrid@~5.9.0":
+  version "5.9.0"
+  resolved "https://registry.yarnpkg.com/@fullcalendar/daygrid/-/daygrid-5.9.0.tgz#d168d63ee850883a62c599bbae2695a32ef42f6f"
+  integrity sha512-yTYjTM+bjTWfq5uUnSMBH4j1il+b0IAAe+q2UcAeky4iggwn9pi+taUtETtlPTQCSBSWaF8TuEZ3+apB0RrjyQ==
+  dependencies:
+    "@fullcalendar/common" "~5.9.0"
+    tslib "^2.1.0"
+
+"@fullcalendar/interaction@^5.9.0":
+  version "5.9.0"
+  resolved "https://registry.yarnpkg.com/@fullcalendar/interaction/-/interaction-5.9.0.tgz#7211f89074cc89b9234a9333fc8ec346bd4ff3f3"
+  integrity sha512-bBvcY3Mh2z4rP5AqB8dL76SljPEVCVawNmdQlcKShedhxvkkMR1zMcJ3sgabLBvXqooC9f+PbmEb5LlSGEse3A==
+  dependencies:
+    "@fullcalendar/common" "~5.9.0"
+    tslib "^2.1.0"
+
+"@fullcalendar/timegrid@^5.9.0":
+  version "5.9.0"
+  resolved "https://registry.yarnpkg.com/@fullcalendar/timegrid/-/timegrid-5.9.0.tgz#06b8367cb98648c5be23a5b4ba42a124747f5744"
+  integrity sha512-X9JLepHz6hSuiziVkIlgBkx/W/5E4nIqJ6i0LISk3zPFH/Arn0QjQU345ISys8OTwezPUgJvLGrl4Yy4/gRULw==
+  dependencies:
+    "@fullcalendar/common" "~5.9.0"
+    "@fullcalendar/daygrid" "~5.9.0"
+    tslib "^2.1.0"
+
+"@fullcalendar/vue@^5.9.0":
+  version "5.9.0"
+  resolved "https://registry.npmjs.org/@fullcalendar/vue/-/vue-5.9.0.tgz"
+  integrity sha512-P18svkJldj9dz0AZN0PTKzhcXOJJ9Do5T0iI9GNOXu+WqdQJdtBEyl87A+VgWn85CvefWqf5Yc44U4LdW1QjiA==
+  dependencies:
+    "@fullcalendar/core" "~5.9.0"
+    tslib "^2.1.0"
+
 "@hapi/address@2.x.x":
   version "2.1.4"
   resolved "https://registry.npmjs.org/@hapi/address/-/address-2.1.4.tgz"
@@ -959,7 +1008,7 @@
 
 "@nuxt/opencollective@^0.3.2":
   version "0.3.2"
-  resolved "https://registry.yarnpkg.com/@nuxt/opencollective/-/opencollective-0.3.2.tgz#83cb70cdb2bac5fad6f8c93529e7b11187d49c02"
+  resolved "https://registry.npmjs.org/@nuxt/opencollective/-/opencollective-0.3.2.tgz"
   integrity sha512-XG7rUdXG9fcafu9KTDIYjJSkRO38EwjlKYIb5TQ/0WDbiTUTtUtgncMscKOYzfsY86kGs05pAuMOR+3Fi0aN3A==
   dependencies:
     chalk "^4.1.0"
@@ -1854,7 +1903,7 @@ aws4@^1.8.0:
 
 axios@^0.22.0:
   version "0.22.0"
-  resolved "https://registry.yarnpkg.com/axios/-/axios-0.22.0.tgz#bf702c41fb50fbca4539589d839a077117b79b25"
+  resolved "https://registry.npmjs.org/axios/-/axios-0.22.0.tgz"
   integrity sha512-Z0U3uhqQeg1oNcihswf4ZD57O3NrR1+ZXhxaROaWpDmsDTx7T2HNBV2ulBtie2hwJptu8UvgnJoK+BIqdzh/1w==
   dependencies:
     follow-redirects "^1.14.4"
@@ -2034,7 +2083,7 @@ boolbase@^1.0.0, boolbase@~1.0.0:
 
 bootstrap-vue@^2.21.2:
   version "2.21.2"
-  resolved "https://registry.yarnpkg.com/bootstrap-vue/-/bootstrap-vue-2.21.2.tgz#ec38f66c3a2205becccddb6158a991d96509ed0b"
+  resolved "https://registry.npmjs.org/bootstrap-vue/-/bootstrap-vue-2.21.2.tgz"
   integrity sha512-0Exe+4MZysqhZNXIKf4TzkvXaupxh9EHsoCRez0o5Dc0J7rlafayOEwql63qXv74CgZO8E4U8ugRNJko1vMvNw==
   dependencies:
     "@nuxt/opencollective" "^0.3.2"
@@ -2045,7 +2094,7 @@ bootstrap-vue@^2.21.2:
 
 "bootstrap@>=4.5.3 <5.0.0":
   version "4.6.0"
-  resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-4.6.0.tgz#97b9f29ac98f98dfa43bf7468262d84392552fd7"
+  resolved "https://registry.npmjs.org/bootstrap/-/bootstrap-4.6.0.tgz"
   integrity sha512-Io55IuQY3kydzHtbGvQya3H+KorS/M9rSNyfCGCg9WZ4pyT/lCxIlpJgG1GXW/PswzC84Tr2fBYi+7+jFVQQBw==
 
 brace-expansion@^1.1.7:
@@ -2637,7 +2686,7 @@ connect-history-api-fallback@^1.6.0:
 
 consola@^2.15.0:
   version "2.15.3"
-  resolved "https://registry.yarnpkg.com/consola/-/consola-2.15.3.tgz#2e11f98d6a4be71ff72e0bdf07bd23e12cb61550"
+  resolved "https://registry.npmjs.org/consola/-/consola-2.15.3.tgz"
   integrity sha512-9vAdYbHj6x2fLKC4+oPH0kFzY/orMZyG2Aj+kNylHxKGJ/Ed4dpNyAQYwJOdqO4zdM7XpVHmyejQDcQHrnuXbw==
 
 console-browserify@^1.1.0:
@@ -5691,7 +5740,7 @@ no-case@^2.2.0:
 
 node-fetch@^2.6.1:
   version "2.6.5"
-  resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.6.5.tgz#42735537d7f080a7e5f78b6c549b7146be1742fd"
+  resolved "https://registry.npmjs.org/node-fetch/-/node-fetch-2.6.5.tgz"
   integrity sha512-mmlIVHJEu5rnIxgEgez6b9GgWXbkZj5YZ7fx+2r94a2E+Uirsp6HsPTPlomfdHtpt/B0cdKviwkoaM6pyvUOpQ==
   dependencies:
     whatwg-url "^5.0.0"
@@ -6280,12 +6329,12 @@ pnp-webpack-plugin@^1.6.4:
 
 popper.js@^1.16.1:
   version "1.16.1"
-  resolved "https://registry.yarnpkg.com/popper.js/-/popper.js-1.16.1.tgz#2a223cb3dc7b6213d740e40372be40de43e65b1b"
+  resolved "https://registry.npmjs.org/popper.js/-/popper.js-1.16.1.tgz"
   integrity sha512-Wb4p1J4zyFTbM+u6WuO4XstYx4Ky9Cewe4DWrel7B0w6VVICvPwdOpotjzcf6eD8TsckVnIMNONQyPIUFOUbCQ==
 
 portal-vue@^2.1.7:
   version "2.1.7"
-  resolved "https://registry.yarnpkg.com/portal-vue/-/portal-vue-2.1.7.tgz#ea08069b25b640ca08a5b86f67c612f15f4e4ad4"
+  resolved "https://registry.npmjs.org/portal-vue/-/portal-vue-2.1.7.tgz"
   integrity sha512-+yCno2oB3xA7irTt0EU5Ezw22L2J51uKAacE/6hMPMoO/mx3h4rXFkkBkT4GFsMDv/vEe8TNKC3ujJJ0PTwb6g==
 
 portfinder@^1.0.26:
@@ -6633,6 +6682,11 @@ postcss@^7.0.0, postcss@^7.0.1, postcss@^7.0.14, postcss@^7.0.27, postcss@^7.0.3
   dependencies:
     nanocolors "^0.2.2"
     source-map "^0.6.1"
+
+preact@^10.0.5:
+  version "10.5.14"
+  resolved "https://registry.npmjs.org/preact/-/preact-10.5.14.tgz"
+  integrity sha512-KojoltCrshZ099ksUZ2OQKfbH66uquFoxHSbnwKbTJHeQNvx42EmC7wQVWNuDt6vC5s3nudRHFtKbpY4ijKlaQ==
 
 prelude-ls@~1.1.2:
   version "1.1.2"
@@ -7932,7 +7986,7 @@ tough-cookie@~2.5.0:
 
 tr46@~0.0.3:
   version "0.0.3"
-  resolved "https://registry.yarnpkg.com/tr46/-/tr46-0.0.3.tgz#8184fd347dac9cdc185992f3a6622e14b9d9ab6a"
+  resolved "https://registry.npmjs.org/tr46/-/tr46-0.0.3.tgz"
   integrity sha1-gYT9NH2snNwYWZLzpmIuFLnZq2o=
 
 tryer@^1.0.1:
@@ -7949,6 +8003,11 @@ tslib@^1.9.0:
   version "1.14.1"
   resolved "https://registry.npmjs.org/tslib/-/tslib-1.14.1.tgz"
   integrity sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==
+
+tslib@^2.1.0:
+  version "2.3.1"
+  resolved "https://registry.npmjs.org/tslib/-/tslib-2.3.1.tgz"
+  integrity sha512-77EbyPPpMz+FRFRuAFlWMtmgUWGe9UOG2Z25NqCwiIjRhOf5iKGuzSe5P2w1laq+FkRy4p+PCuVkJSGkzTEKVw==
 
 tty-browserify@0.0.0:
   version "0.0.0"
@@ -8266,7 +8325,7 @@ vue-eslint-parser@^7.0.0:
 
 vue-functional-data-merge@^3.1.0:
   version "3.1.0"
-  resolved "https://registry.yarnpkg.com/vue-functional-data-merge/-/vue-functional-data-merge-3.1.0.tgz#08a7797583b7f35680587f8a1d51d729aa1dc657"
+  resolved "https://registry.npmjs.org/vue-functional-data-merge/-/vue-functional-data-merge-3.1.0.tgz"
   integrity sha512-leT4kdJVQyeZNY1kmnS1xiUlQ9z1B/kdBFCILIjYYQDqZgLqCLa0UhjSSeRX6c3mUe6U5qYeM8LrEqkHJ1B4LA==
 
 vue-hot-reload-api@^2.3.0:
@@ -8364,7 +8423,7 @@ wcwidth@^1.0.1:
 
 webidl-conversions@^3.0.0:
   version "3.0.1"
-  resolved "https://registry.yarnpkg.com/webidl-conversions/-/webidl-conversions-3.0.1.tgz#24534275e2a7bc6be7bc86611cc16ae0a5654871"
+  resolved "https://registry.npmjs.org/webidl-conversions/-/webidl-conversions-3.0.1.tgz"
   integrity sha1-JFNCdeKnvGvnvIZhHMFq4KVlSHE=
 
 webpack-bundle-analyzer@^3.8.0:
@@ -8512,7 +8571,7 @@ websocket-extensions@>=0.1.1:
 
 whatwg-url@^5.0.0:
   version "5.0.0"
-  resolved "https://registry.yarnpkg.com/whatwg-url/-/whatwg-url-5.0.0.tgz#966454e8765462e37644d3626f6742ce8b70965d"
+  resolved "https://registry.npmjs.org/whatwg-url/-/whatwg-url-5.0.0.tgz"
   integrity sha1-lmRU6HZUYuN2RNNib2dCzotwll0=
   dependencies:
     tr46 "~0.0.3"

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container">
     <v-calendar
       class="custom-calendar max-w-full"
       :masks="masks"
